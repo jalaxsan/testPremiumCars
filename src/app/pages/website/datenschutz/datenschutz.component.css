@@ -1,0 +1,62 @@
+/* Centering container using Flexbox */
+.outer-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Ensure the container covers the full viewport height */
+    margin: 0;
+  }
+  
+  /* Styling for the Datenschutz content */
+  .datenschutz-container {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    color: #333;
+    background: #fff;
+    padding: 40px; /* Increased padding for more space inside the card */
+    border-radius: 12px; /* Slightly larger border-radius for a more modern look */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Larger shadow for more depth */
+    max-width: 900px; /* Increased max-width for a bigger card */
+    width: 90%; /* Adjusted width for responsiveness */
+    margin-top: 50px; /* Add space below the header */
+    box-sizing: border-box;
+    line-height: 1.6;
+  }
+  
+  h1 {
+    font-size: 32px; /* Larger font size for the heading */
+    color: #2c3e50;
+    border-bottom: 3px solid #2980b9; /* Slightly thicker border */
+    padding-bottom: 10px;
+    margin-bottom: 30px; /* Increased margin for more space below the heading */
+  }
+  
+  h2 {
+    font-size: 24px; /* Font size for section headings */
+    color: #2c3e50;
+    margin-top: 20px;
+  }
+  
+  .section {
+    margin-bottom: 25px; /* Increased margin for more space between sections */
+  }
+  
+  .section p {
+    margin: 8px 0; /* Slightly larger margin for more space between paragraphs */
+  }
+  
+  a {
+    color: #2980b9;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Media query for responsiveness */
+  @media screen and (max-width: 768px) {
+    .datenschutz-container {
+      padding: 20px; /* Adjusted padding for smaller screens */
+    }
+  }
+  

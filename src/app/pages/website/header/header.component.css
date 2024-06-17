@@ -1,0 +1,26 @@
+.nav-yellow {
+    background-color: transparent;
+}
+
+.textBlur {
+    filter: blur(1px);
+}
+
+@media (max-width: 767.98px) {
+    .navbar-nav {
+        text-align: center;
+    }
+}
+
+a {
+    font-size: large;
+}
+
+.navbar-brand img {
+    max-height: 150px; /* Adjust this value as needed */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+  .navbar-nav .nav-link {
+    font-size: 24px; /* Adjust link font size */
+}

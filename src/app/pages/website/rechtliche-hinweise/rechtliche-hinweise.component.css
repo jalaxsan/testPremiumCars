@@ -1,0 +1,38 @@
+/* Container styles */
+.rechtliche-hinweise-container {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    color: #333;
+    background: #fff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 900px;
+    width: 90%; /* Adjusted width for responsiveness */
+    margin: 50px auto; /* Centering the container and adding space below header */
+    box-sizing: border-box;
+    line-height: 1.6;
+  }
+  
+  /* Header styles */
+  nav {
+    background-color: #2c3e50;
+    padding: 15px;
+  }
+  
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 15px;
+  }
+  
+  nav a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Media query for responsiveness */
+  @media screen and (max-width: 768px) {
+    .rechtliche-hinweise-container {
+      padding: 20px; /* Adjusted padding for smaller screens */
+    }
+  }
+  

@@ -1,0 +1,178 @@
+<div class="image-slider-container">
+  <app-transparent-header></app-transparent-header>
+  <app-image-slider
+    [indicatorsVisible]="false"
+    [animationSpeed]="300"
+    [autoPlay]="true"
+    [slides]="slides"
+  ></app-image-slider>
+</div>
+
+<!-- WhatsApp Modal -->
+<div
+  class="modal fade"
+  id="whatsappModal"
+  tabindex="-1"
+  aria-labelledby="whatsappModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="whatsappModalLabel">WhatsApp Chat</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <form id="whatsappForm">
+          <div class="mb-3">
+            <label for="whatsappMessage" class="form-label"
+              >Your Question</label
+            >
+            <textarea
+              class="form-control"
+              id="whatsappMessage"
+              rows="3"
+              placeholder="Type your question here..."
+            ></textarea>
+          </div>
+          <div class="mb-3">
+            <label for="displayMessage" class="form-label">Your Message</label>
+            <p
+              id="displayMessage"
+              class="form-control"
+              style="border: none; padding: 0; color: #000"
+            ></p>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+          Close
+        </button>
+        <button type="button" class="btn btn-primary" id="sendWhatsAppMessage">
+          Send
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- WhatsApp Button (for demonstration) -->
+<a
+  class="nav-link p-0 mx-2"
+  href="#"
+  data-bs-toggle="modal"
+  data-bs-target="#whatsappModal"
+  aria-label="WhatsApp"
+>
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+<script>
+  document.addEventListener("scroll", function () {
+    const header = document.getElementById("header");
+    if (window.scrollY > 50) {
+      // Adjust the scroll value as needed
+      header.classList.add("scrolled");
+    } else {
+      header.classList.remove("scrolled");
+    }
+  });
+
+  document.addEventListener("DOMContentLoaded", function () {
+    document
+      .getElementById("sendWhatsAppMessage")
+      .addEventListener("click", function () {
+        const message = document.getElementById("whatsappMessage").value;
+
+        // Display the message in the displayMessage element
+        document.getElementById("displayMessage").innerText = message;
+
+        // Logging the message to the console for debugging
+        console.log("Message:", message);
+      });
+  });
+
+  // Get the header
+  var header = document.getElementById("header");
+
+  // Get the offset position of the header
+  var sticky = header.offsetTop;
+
+  // Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
+  function stickyHeader() {
+    if (window.pageYOffset > sticky) {
+      header.classList.add("sticky");
+    } else {
+      header.classList.remove("sticky");
+    }
+  }
+
+  // When the user scrolls the page, execute stickyHeader
+  window.onscroll = function () {
+    stickyHeader();
+  };
+</script>
+
+<section id="welcome-section">
+  <h1>Herzlich willkommen bei PremiumCars GmbH!</h1>
+  <p>
+    Wir freuen uns, Sie in der Welt der Luxusfahrzeuge begrüßen zu dürfen. Bei
+    PremiumCars stehen Ihnen exklusive Angebote und erstklassiger Service rund
+    um Ihr Fahrerlebnis zur Verfügung.
+  </p>
+  <p>
+    Entdecken Sie unsere breite Palette an hochwertigen Fahrzeugen, von
+    eleganten Limousinen über leistungsstarke Sportwagen bis hin zu luxuriösen
+    SUVs. Unser erfahrenes Team steht Ihnen jederzeit zur Verfügung, um Ihnen
+    bei der Auswahl des perfekten Fahrzeugs zu helfen, das Ihren individuellen
+    Bedürfnissen und Ansprüchen entspricht.
+  </p>
+  <p>
+    Neben unserem herausragenden Fahrzeugangebot bieten wir auch
+    maßgeschneiderte Finanzierungsoptionen, exklusive Zusatzleistungen und einen
+    erstklassigen Kundenservice, um sicherzustellen, dass Ihr Fahrerlebnis bei
+    PremiumCars unvergesslich bleibt.
+  </p>
+  <p>
+    Tauchen Sie ein in die Welt des Luxus und der Eleganz mit PremiumCars – wir
+    freuen uns darauf, Sie auf Ihrer Fahrzeugreise zu begleiten!
+  </p>
+  <p>Herzlichst,<br />Das Team von PremiumCars</p>
+  <br /><br />
+  <h2>Unsere Angebote:</h2>
+</section>
+
+<app-car-page></app-car-page>
+
+<!-- Your modals and other content below this -->
+
+<div class="content">
+  <router-outlet></router-outlet>
+</div>
+
+<style>
+  #welcome-section {
+    text-align: center;
+    padding: 50px 0;
+  }
+
+  #welcome-section h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+  }
+
+  #welcome-section p {
+    color: #000;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+  }
+</style>
+

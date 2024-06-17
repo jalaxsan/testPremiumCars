@@ -1,0 +1,193 @@
+.dropdown-item:hover {
+  background: #81C408 !important;
+}
+
+#password-input-container {
+  position: relative;
+}
+
+.password-eye {
+  position: absolute;
+  bottom: 14%;
+  right: 8%;
+  font-size: medium;
+}
+
+.loginBtn {
+  background: #5e5e5e;
+  width: calc(100% - 32px);
+  margin: 0px 16px;
+  padding: 5px 0px;
+  box-sizing: border-box;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.loginBtn:active {
+  /* background: #81C408; */
+  border: none;
+}
+
+.loginDropdownMenu {
+  width: 220px !important;
+}
+
+.regDiv {
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.registerLink {
+  text-decoration: none !important;
+}
+
+.registerLink:hover {
+  cursor: pointer;
+  text-decoration: underline !important;
+  color: #81C408;
+}
+
+.userProfile {
+  margin: 7px 0px 0px 0px;
+  cursor: pointer !important;
+}
+
+.rememberMeTxt {
+  margin: -3px 0px 0px 0px !important;
+  font-size: 14px;
+}
+
+.logOutBtn {
+  padding: 4px 10px 4px 10px;
+  margin: 6px 0px 0px 0px;
+}
+
+.logOutBtn i:hover {
+  color: #fff !important;
+}
+
+/* Add this to your styles.css or styles.scss */
+.sub-menu {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  margin-top: -1px;
+}
+
+.cartImg {
+  height: 50px !important;
+  width: 80px !important;
+}
+
+/* Transparent Header Styles */
+.header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  backdrop-filter: blur(5px); /* Optional: adds a blur effect to the background */
+  transition: color 0.3s ease;
+}
+
+.header.scrolled {
+  backdrop-filter: blur(2px); /* Optional: adds a blur effect to the background */
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: #ffffff; /* Default color */
+  transition: color 0.3s ease; /* Smooth transition */
+}
+
+.header.scrolled .navbar-light .navbar-nav .nav-link {
+  color: #333; /* Darker color when scrolled */
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+  color: #ece3e3; /* Slightly darker on hover */
+}
+
+.header.scrolled .navbar-light .navbar-nav .nav-link:hover {
+  color: #555; /* Slightly darker on hover when scrolled */
+}
+
+.navbar-brand img {
+  max-height: 100px; /* Adjust height to fit better in the navbar */
+}
+
+.main-content {
+  padding-top: 120px; 
+}
+
+/* Social icons styles */
+.nav-item.d-flex.align-items-center .nav-link {
+  font-size: 20px; /* Adjust size as needed */
+  margin: 0; /* No margin between icons */
+  padding: 0; /* No padding for social icons */
+}
+
+.nav-item.d-flex.align-items-center .nav-link i {
+  color: #ffffff; /* Default color for icons */
+}
+
+.header.scrolled .nav-item.d-flex.align-items-center .nav-link i {
+  color: #333; /* Darker color for icons when scrolled */
+}
+
+.nav-item.d-flex.align-items-center .nav-link:hover i {
+  color: #ece3e3; /* Slightly darker on hover */
+}
+
+.header.scrolled .nav-item.d-flex.align-items-center .nav-link:hover i {
+  color: #555; /* Slightly darker on hover when scrolled */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .header {
+    backdrop-filter: blur(2px); /* Optional: adds a blur effect to the background */
+  }
+
+  .main-content {
+    padding-top: 100px; /* Adjust padding for smaller screens */
+  }
+
+  .nav-item.d-flex.align-items-center .nav-link {
+    margin: 0 5px; /* Adjust spacing for smaller screens */
+  }
+}
+
+/* General font color styles for better readability */
+body {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  color: #948f8f; /* Default text color */
+  background-color: #e0e0e0; /* Light grey background for contrast */
+}
+
+p, a {
+  color: #ffffff; /* Consistent text color */
+  font-size: large;
+}
+
+a:hover {
+  color: #ff3535; /* Darker color on hover */
+  text-decoration: underline;
+}
+.image-slider-container {
+  position: relative;
+}
+
+app-transparent-header {
+  backdrop-filter: blur(5px); /* Adjust the blur radius as needed */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2; /* Ensure the transparent header is positioned above the image slider */
+}
+
+app-image-slider {
+  position: relative;
+  z-index: 1; /* Ensure the image slider is positioned below the transparent header */
+}
+

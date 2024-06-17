@@ -1,0 +1,94 @@
+.image-slider-container {
+  position: relative;
+}
+
+.slider-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2; /* Ensure the overlay is above the transparent header */
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* Ensure the header is above other content */
+  padding: 0;
+  backdrop-filter: blur(0px); /* No blur by default */
+}
+
+.navbar-brand img {
+  height: 180px; /* Adjust logo size on mobile */
+}
+
+a {
+  color: white;
+  font-size: 24px;
+}
+
+a:hover {
+  color: rgb(139, 133, 133);
+  font-size: 24px;
+}
+
+.header .navbar-brand {
+  font-size: 23px; /* Adjust the font size as needed */
+}
+
+.header .nav-link {
+  font-size: 28px; /* Adjust the font size as needed */
+}
+
+@media (max-width: 767.98px) {
+  .header {
+      backdrop-filter: blur(10px); /* Apply blur effect on mobile */
+      padding: 40px 0; /* Increase padding to make the header bigger */
+  }
+
+  .header .navbar-brand img {
+      height: 100px; /* Adjust logo size on mobile */
+  }
+
+  .header .nav-link {
+      font-size: 20px; /* Adjust link font size on mobile */
+  }
+
+  .navbar-collapse {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh; /* Full viewport height */
+      background: rgba(0, 0, 0, 0.8); /* Semi-transparent dark background */
+      backdrop-filter: blur(10px); /* Blur effect for the background */
+      z-index: 1001; /* Ensure the collapse menu is above the header */
+      padding-top: 20px; /* Adjust padding to align content */
+  }
+
+  .navbar-nav {
+      width: 100%;
+      text-align: center;
+  }
+
+  .navbar-nav .nav-item {
+      margin: 10px 0; /* Spacing between items */
+  }
+
+  .navbar-nav .nav-link {
+      font-size: 24px; /* Adjust link font size */
+  }
+
+  .navbar-collapse .close-btn {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      font-size: 30px;
+      color: white;
+      cursor: pointer;
+      z-index: 1002; /* Ensure the close button is above the collapse menu */
+  }
+}
